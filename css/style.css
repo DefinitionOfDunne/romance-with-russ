@@ -21,6 +21,9 @@ body {
  width: 98%;
  height: 100%
 }
+.poem, .poet {
+	color: yellow;
+}
 
 .fa-heart {
 	color: yellow;
@@ -31,7 +34,9 @@ body {
 	color: #ED17BF;
 	text-shadow: 1px 1px 2px black, 0 0 1em yellow, 0 0 0.2em yellow;
 }
-
+.fa-chevron-circle-left, .fa-chevron-circle-right {
+	color: yellow;
+}
 span {
 	color: yellow;
 	font-size: 3em;
