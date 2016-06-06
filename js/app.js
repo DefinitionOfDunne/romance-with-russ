@@ -11,6 +11,9 @@ $(document).ready(function() {
 });
 
 
+$('#generate-line').click(romanceGenerator);
+
+
 function type() {
     captionEl.html(caption.substr(0, captionLength++));
     if(captionLength < caption.length+1) {
@@ -27,3 +30,23 @@ function showMainPage() {
         $(".main-page").show();
     })
 }
+
+
+
+function romanceGenerator() {
+    input = $('#query-term').val();
+    $.ajax({
+        type: 'GET',
+        url: "http://www.stands4.com/services/v2/poetry.php?uid=5155&tokenid=JSR1kuuz7VsY4Stq&term=" + input,
+        dataType: "xml",
+        success: function(data) {
+            $(data).find('results').each( function(){
+            var line = $(this).find('poem').text();
+            var poet = $(this).find('poet').text();
+            $('.poem').append(line);
+            $('.poet').append(poet);
+            });
+        }
+    });
+};
+
