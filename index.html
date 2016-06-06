@@ -10,7 +10,7 @@
 </head>
 
 
-
+<!-- FRONT PAGE -->
 <div class="container">
     <section class="intro-screen">
         <h1>Romance With Russ</h1>
@@ -24,19 +24,25 @@
     </section>
 
 
-
+<!-- MAIN PAGE -->
     <section class="main-page">
         <h1>Face it, dude!</h1>
         <p id="description">You're a bozo and you're girl deserves better! <br> Need that perfect text or an IG caption fit for a queen?<br> You don't ever want to get busted being a phony, <br> so let legendary cornball Russell Wilson search the web for you!</p>
         <img src="images/russ-head.png" class="russ-floating-head">
-        <input type="text" name="generate" placeholder="Search word or phrase here" required>
+        <input type="text" id="query-term" name="generate" placeholder="Search word or phrase here" required>
         <button id="generate-line">Generate Poetry</button>
+
+<!-- RESULTS AREA -->        
         <div class="results-container">
    			<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                <div class="search-results"></div>
+                    <ul class="poem-lines"></ul>
+                     <li class="poem"></li>
+                     <li class="poet"><li>
    			<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-            <div class="search-results"></div>
-            	<ul class="poem-lines"></ul>
         </div>
+
+
     </section>
 </div>
 
