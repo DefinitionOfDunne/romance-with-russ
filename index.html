@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Romance With Russ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<!-- FRONT PAGE -->
+<div class="container">
+    <section class="intro-screen">
+        <h1>Romance With Russ</h1>
+        <p class="typing-text"> </p>
+        <img src="images/russ-head.png" class="russ-floating-head">
+        <div class="start-container">
+            <span>&#10551;</span>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <span>&#10550;</span>
+        </div>
+    </section>
+    <!-- MAIN PAGE -->
+    <section class="main-page">
+        <h1>Face it, dude!</h1>
+        <p id="description">You're a bozo and you're girl deserves better!
+            <br> Need that perfect text or an IG caption fit for a queen?
+            <br> You don't ever want to get busted being a phony,
+            <br> so let legendary cornball Russell Wilson search the web for you!</p>
+        <img src="images/russ-head.png" class="russ-floating-head">
+        <input type="text" id="query-term" name="generate" placeholder="Search word or phrase here" required>
+        <button id="generate-line">Generate Poetry</button>
+        <!-- RESULTS AREA -->
+        <div class="results-container">
+            <ul class="poem-lines"></ul>
+            <li class="poem">"nothing which we are to perceive in this world equals the power of your intense fragility: whose texture compels me with colour of its countries"</li>
+            <li class="poet">e.e. cummings<li>
+                    <div class="toggle-arrows">
+                        <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                        <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                    </div>
+        </div>
+    </section>
+</div>
+
+<body>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

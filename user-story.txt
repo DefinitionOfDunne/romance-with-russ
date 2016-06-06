@@ -1,0 +1,23 @@
+ROMANCE WITH RUSS USER STORY:
+	1. User accesses page via browser
+	2. User is presented with a basic welcome page with a start button
+	3. Upon clicking start button, basic welcome page is hidden and main page is shown
+	4. User is prompted to enter a word or phrase into an input bar
+	5. User presses clicks a submit button to run the app functionality
+	6. Upon clicking submit button, word or phrase is grabbed and searches for matches in the Poetry.net API
+	7. Poetry.net API specifically within category=love and endpoint .lines
+	8. At random, a line of poetry from the API is appended to screen.
+	9. Using left or right scroll icons, user can toggle through all matching results < 5
+	10. If no matches are found, a try again message will be appended to screen.
+
+
+
+ADDITIONAL FUNCTIONALITY:
+	1. Using Twilio API, user can select 1 of the results and message it to someone automatically	
+
+
+
+
+User ID: 5155
+Token: JSR1kuuz7VsY4Stq
+Web Admin Password: LJe6Lmbc
