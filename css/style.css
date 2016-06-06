@@ -87,8 +87,8 @@ input {
 }
 .toggle-arrows {
 	text-align: center;
-    letter-spacing: 5em;
-    margin-top: 2em;
+  	letter-spacing: 5em;
+  	margin-top: 2em;
 }
 #generate-line {
 	position: absolute;
