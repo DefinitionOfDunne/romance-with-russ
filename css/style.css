@@ -86,9 +86,10 @@ input {
     top: 17em;
 }
 .toggle-arrows {
+	display: none;
 	text-align: center;
-  	letter-spacing: 5em;
-  	margin-top: 2em;
+    letter-spacing: 5em;
+    margin-top: 2em;
 }
 #generate-line {
 	position: absolute;
@@ -96,4 +97,25 @@ input {
 }
 .main-page {
 	display: none;
+}
+.poem-content {
+	font-family: "Josefin Sans";
+	font-size: 1.3em;
+}
+.poem-poet {
+	font-family: 'Parisienne', cursive;
+	color: #F5FF65;
+	text-align: right;
+	font-size: 1em;
+}
+.active {
+	display:inline;
+}
+
+li {
+	display: none;
+}
+#credit {
+	font-size: .6em;
+	margin-top: 7em;
 }
