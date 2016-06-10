@@ -1,0 +1,13 @@
+@media screen and (max-width:700px) {
+	body {
+	font-family: initial;
+	font-size: 100%;
+	width: 500px;
+ 	box-sizing: border-box;
+}
+
+.ciara-floating-head {
+	display: none;
+}
+
+}
