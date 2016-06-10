@@ -19,7 +19,13 @@ body {
 
 .container {
  width: 98%;
- height: 100%
+ height: 100%;
+ margin-top: 3em;
+}
+.page-content{
+	display: inline-flex;
+	width: 99%;
+	align-items: center;
 }
 .poem, .poet {
 	color: yellow;
@@ -28,14 +34,18 @@ body {
 .fa-heart {
 	color: yellow;
 	font-size: 10em;
+	margin: 0 auto;
 }
 
 .fa-heart:hover { 
 	color: #ED17BF;
 	text-shadow: 1px 1px 2px black, 0 0 1em yellow, 0 0 0.2em yellow;
 }
-.fa-chevron-circle-left, .fa-chevron-circle-right {
-	color: yellow;
+.fa-chevron-circle-left {
+	float: left;
+}
+.fa-chevron-circle-right {
+	float: right;
 }
 span {
 	color: yellow;
@@ -49,19 +59,16 @@ h1, h3 {
 }
 .russ-floating-head {
 	opacity: .25;
-	position: relative;
-    left: 3em;
-    top: -7em;
+    margin-left: 2em;
     height: 30em;
 
 }
-
-.start-container {
-	float: right;
-    position: relative;
-    top: 10em;
-    right: 30em; 
+.ciara-floating-head {
+	opacity: .25;
+    float: right;
+    height: 30em;
 }
+
 
 p {
 	color: #F5FF65;
@@ -73,30 +80,55 @@ p {
     line-height: 1.5em;
     font-size: 1.1em;
 }
-input {
-	position: absolute;
-	right: 55em;
+
+.input-container{
+	font-family: "Josefin Sans";
+	width: 40%;
+  	margin: 0 auto;
+  	padding: 2em 0em 3em 0em;
+}
+
+#query-term {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	border: 2px solid #cdcdcd;
+	border-radius: .3em;
+	font-size: .65em;
+}
+
+#generate-button{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	border: 2px solid #cdcdcd;
+	border-radius: .3em;
+	font-size: .65em;
 }
 .results-container {
 	font-family: 'Parisienne', cursive;
-    position: absolute;
     font-size: 1.5em;
-    width: 50%;
-    right: 8em;
-    top: 17em;
+    height: 20em;
+    width: 35%;
+  	margin: 0 auto;
 }
+
+.heart-icon-center{
+	text-align: center;
+	display: inline-flex;
+	width: 44%;
+}
+
 .toggle-arrows {
 	display: none;
 	text-align: center;
-    letter-spacing: 5em;
     margin-top: 2em;
+    color: yellow;
 }
-#generate-line {
-	position: absolute;
-	right: 45em;
-}
+
 .main-page {
 	display: none;
+	
 }
 .poem-content {
 	font-family: "Josefin Sans";
@@ -106,8 +138,10 @@ input {
 	font-family: 'Parisienne', cursive;
 	color: #F5FF65;
 	text-align: right;
-	font-size: 1em;
+	font-size: 1.5em;
+    margin-top: 1em;
 }
+
 .active {
 	display:inline;
 }
@@ -117,5 +151,12 @@ li {
 }
 #credit {
 	font-size: .6em;
-	margin-top: 7em;
+	width: 100%;
+}
+
+#credit p {
+	color: #F5FF65;
+    font-family: Arial;
+    margin: 8em 0em 0em 5em;
+    text-align: left;
 }
