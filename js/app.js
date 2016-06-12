@@ -1,26 +1,10 @@
 'use strict';
 
-var captionLength = 0,
-    captionEl = $('.typing-text'),
-    caption = "Ummmm, how do I describe a beautiful women????",
-    i = 0;
-
-type();
+ 
 showMainPage();
-$('#generate-line').click(romanceGenerator);
+$('#generate-button').click(romanceGenerator);
 toggleResults();
-
-
-
-function type() {
-    captionEl.html(caption.substr(0, captionLength++));
-    if (captionLength < caption.length + 1) {
-        setTimeout('type()', 50);
-    } else {
-        captionLength = 0;
-        caption = '';
-    }
-}
+clearSearch();
 
 function showMainPage() {
     $(".fa-heart").click(function() {
@@ -39,27 +23,25 @@ function romanceGenerator() {
         success: function(data) {
             var json = $.xml2json(data);
             var poems = json['#document'].results.result;
-            $.each(poems, function(key, value) {
-                var poemSelection = value.poem.split('\n')[0];
-                if ($('.poem-lines li').length < 5) {
-                    $('.poem-lines').append('<li></h1><p class="poem-content">' + poemSelection + '</p><h5 class="poem-poet">' + '- ' + value.poet + '</h5></li>');
-                    $('li:first-child').addClass('active');
-                    console.log(value.poem);
-                } else {
-                    console.log('done');
-                }
-            });
+            appendPoems(poems);
         }
     });
 };
 
+function appendPoems(poems) {
+    $.each(poems, function(key, value) {
+        var poemSelection = value.poem.split('\n')[0]; 
+            $('.poem-lines').append('<li class="poem-results"></h1><p class="poem-content">' + poemSelection + '.</p><h5 class="poem-poet">' + '- ' + value.poet + '</h5></li>');
+            $('li:first-child').addClass('active');
+    });
+}
 
 function toggleResults() {
     $("#right-arrow").click(function() {
         if ($('.active').length > 0) {
             $('.active').removeClass('active').next().addClass('active');
         } else {
-            $('li:first').addClass('active');
+            $('li:last').addClass('active');
         }
     });
     $("#left-arrow").click(function() {
@@ -69,4 +51,10 @@ function toggleResults() {
             $('li:first').addClass('active');
         }
     });
+}
+function clearSearch(){
+    $('#clear-button').click(function(){
+         $('.toggle-arrows').hide();
+         $('.poem-results').remove();
+    })
 }
