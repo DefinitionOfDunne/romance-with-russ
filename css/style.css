@@ -1,5 +1,13 @@
+
+/* GOOGLE FONTS */
 @import url(https://fonts.googleapis.com/css?family=Parisienne&subset=latin,latin-ext);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+
+
+
+
+
+/* STANDARD HTML FEATURES */
 
 * {
 	-webkit-box-sizing: border-box;
@@ -8,8 +16,6 @@
 }
 
 html {
-	width: 100%;
-	height: 100%;
 	background-color: #1C0C45;
 }
 
@@ -17,46 +23,52 @@ body {
 	font-size: 100%;
 }
 
+
+
+
+
+
+/* MAIN SECTIONS */
+
 .container {
- width: 98%;
+ width: 1200px;
  height: 100%;
  margin-top: 3em;
 }
-.page-content{
+.intro-screen {
+}
+
+.main-page {
+	display: none;
+}
+
+.page-content {
 	display: inline-flex;
 	width: 99%;
 	align-items: center;
 }
-.poem, .poet {
-	color: yellow;
-}
-
-.fa-heart {
-	color: yellow;
-	font-size: 10em;
-	margin: 0 auto;
-}
-
-.fa-heart:hover { 
-	color: #ED17BF;
-	text-shadow: 1px 1px 2px black, 0 0 1em yellow, 0 0 0.2em yellow;
-}
-.fa-chevron-circle-left {
-	float: left;
-}
-.fa-chevron-circle-right {
-	float: right;
-}
-span {
-	color: yellow;
-	font-size: 3em;
-}
-h1, h3 {
+h1 {
 	color: #F5FF65;
 	font-family: 'Parisienne', cursive;
 	text-align: center;
     font-size: 3em;
 }
+h3 {
+	color: #F5FF65;
+	font-family: 'Josefin Sans';
+	text-align: center;
+    font-size: 1em;
+    margin-top: 2em;	
+}
+p {
+	color: #F5FF65;
+	font-family: 'Josefin Sans';
+	text-align: center;
+}
+
+
+
+/* IMAGES */
 .russ-floating-head {
 	opacity: .25;
     margin-left: 2em;
@@ -70,24 +82,36 @@ h1, h3 {
 }
 
 
-p {
-	color: #F5FF65;
-	font-family: Arial;
+
+
+
+/* INTRO PAGE CONTENT */
+.heart-icon-center{
 	text-align: center;
+	display: inline-flex;
+	width: 44%;
 }
-#description {
-    font-family: 'Josefin Sans';
-    line-height: 1.5em;
-    font-size: 1.1em;
+.fa-heart {
+	color: yellow;
+	font-size: 10em;
+	margin: 0 auto;
+}
+.fa-heart:hover { 
+	color: #ED17BF;
+	text-shadow: 1px 1px 2px black, 0 0 1em yellow, 0 0 0.2em yellow;
 }
 
+
+
+
+
+/* MAIN PAGE CONTENT */
 .input-container{
 	font-family: "Josefin Sans";
 	width: 40%;
   	margin: 0 auto;
   	padding: 2em 0em 3em 0em;
 }
-
 #query-term {
 	display: block;
 	margin: 0 auto;
@@ -105,30 +129,37 @@ p {
 	border-radius: .3em;
 	font-size: .65em;
 }
-.results-container {
-	font-family: 'Parisienne', cursive;
-    font-size: 1.5em;
-    height: 20em;
-    width: 35%;
-  	margin: 0 auto;
+#clear-button{
+	display: block;
+	margin: 0 auto;
+	margin-top: .5em;
+	width: 100%;
+	border: 2px solid #cdcdcd;
+	border-radius: .3em;
+	font-size: .65em;
 }
-
-.heart-icon-center{
-	text-align: center;
-	display: inline-flex;
-	width: 44%;
+.poem, .poet {
+	color: yellow;
 }
-
 .toggle-arrows {
 	display: none;
 	text-align: center;
     margin-top: 2em;
     color: yellow;
 }
+.fa-chevron-circle-left {
+	float: left;
+}
+.fa-chevron-circle-right {
+	float: right;
+}
 
-.main-page {
-	display: none;
-	
+.results-container {
+	font-family: 'Parisienne', cursive;
+    font-size: 1.5em;
+    height: 20em;
+    width: 35%;
+  	margin: 0 auto;
 }
 .poem-content {
 	font-family: "Josefin Sans";
@@ -149,6 +180,11 @@ p {
 li {
 	display: none;
 }
+
+
+
+/* FOOTER LAYOUT AND STYLE */
+
 #credit {
 	font-size: .6em;
 	width: 100%;
@@ -158,5 +194,5 @@ li {
 	color: #F5FF65;
     font-family: Arial;
     margin: 8em 0em 0em 5em;
-    text-align: left;
+    text-align: center;
 }
