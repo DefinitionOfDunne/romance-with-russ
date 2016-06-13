@@ -9,6 +9,16 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    outline: none;
+}
+
+ul {
+    padding:0;
+}
+
+a {
+    text-decoration: none;
+    color:#fff;
 }
 
 html {
@@ -24,8 +34,8 @@ body {
 
 .container {
     width: 1200px;
-    height: 100%;
     margin-top: 3em;
+    margin: 0 auto;
 }
 
 .intro-screen {}
@@ -36,19 +46,19 @@ body {
 
 .page-content {
     display: inline-flex;
-    width: 99%;
+    width: 100%;
     align-items: center;
 }
 
 h1 {
-    color: #F5FF65;
+    color: #fff;
     font-family: 'Parisienne', cursive;
     text-align: center;
     font-size: 3em;
 }
 
 h3 {
-    color: #F5FF65;
+    color: #fff;
     font-family: 'Josefin Sans';
     text-align: center;
     font-size: 1em;
@@ -56,7 +66,7 @@ h3 {
 }
 
 p {
-    color: #F5FF65;
+    color: #fff;
     font-family: 'Josefin Sans';
     text-align: center;
 }
@@ -86,14 +96,14 @@ p {
 }
 
 .fa-heart {
-    color: yellow;
+    color: #fff;
     font-size: 10em;
     margin: 0 auto;
 }
 
 .fa-heart:hover {
     color: #ED17BF;
-    text-shadow: 1px 1px 2px black, 0 0 1em yellow, 0 0 0.2em yellow;
+    text-shadow: 1px 1px 2px black, 0 0 1em #fff, 0 0 0.2em #fff;
 }
 
 
@@ -101,7 +111,6 @@ p {
 
 .input-container {
     font-family: "Josefin Sans";
-    width: 40%;
     margin: 0 auto;
     padding: 2em 0em 3em 0em;
 }
@@ -110,40 +119,45 @@ p {
     display: block;
     margin: 0 auto;
     width: 100%;
-    border: 2px solid #cdcdcd;
-    border-radius: .3em;
+    border: 1px solid #fff;
+    ;
     font-size: .65em;
+    background: transparent;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0;
 }
 
 #generate-button {
     display: block;
     margin: 0 auto;
     width: 100%;
-    border: 2px solid #cdcdcd;
-    border-radius: .3em;
-    font-size: .65em;
+    border: 0;
+    padding: 10px;
+    background: #fff;
 }
 
 #clear-button {
     display: block;
     margin: 0 auto;
-    margin-top: .5em;
     width: 100%;
     border: 2px solid #cdcdcd;
-    border-radius: .3em;
     font-size: .65em;
+    padding: 5px;
+    background: #cdcdcd;
 }
 
 .poem,
 .poet {
-    color: yellow;
+    color: #fff;
 }
 
 .toggle-arrows {
     display: none;
     text-align: center;
     margin-top: 2em;
-    color: yellow;
+    color: #fff;
 }
 
 .fa-chevron-circle-left {
@@ -168,10 +182,8 @@ p {
 }
 
 .poem-poet {
-    font-family: 'Parisienne', cursive;
-    color: #F5FF65;
+    color: #fff;
     text-align: right;
-    font-size: 1.5em;
     margin-top: 1em;
 }
 
@@ -192,7 +204,7 @@ li {
 }
 
 #credit p {
-    color: #F5FF65;
+    color: #fff;
     font-family: Arial;
     margin: 8em 0em 0em 5em;
     text-align: center;
