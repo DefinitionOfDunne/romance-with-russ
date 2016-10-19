@@ -1,86 +1,211 @@
+/* GOOGLE FONTS */
+
 @import url(https://fonts.googleapis.com/css?family=Parisienne&subset=latin,latin-ext);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 
+/* STANDARD HTML FEATURES */
+
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+ul {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
 html {
-	width: 100%;
-	height: 100%;
-	background-color: #1C0C45;
+    background-color: #1C0C45;
 }
 
 body {
-	font-size: 100%;
+    font-size: 100%;
 }
+
+
+/* MAIN SECTIONS */
 
 .container {
- width: 98%;
- height: 100%
-}
-.poem, .poet {
-	color: yellow;
+    width: 1200px;
+    margin-top: 3em;
+    margin: 0 auto;
 }
 
-.fa-heart {
-	color: yellow;
-	font-size: 10em;
+.intro-screen {}
+
+.main-page {
+    display: none;
 }
 
-.fa-heart:hover { 
-	color: #ED17BF;
-	text-shadow: 1px 1px 2px black, 0 0 1em yellow, 0 0 0.2em yellow;
+.page-content {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
 }
-.fa-chevron-circle-left, .fa-chevron-circle-right {
-	color: yellow;
-}
-span {
-	color: yellow;
-	font-size: 3em;
-}
-h1, h3 {
-	color: #F5FF65;
-	font-family: 'Parisienne', cursive;
-	text-align: center;
+
+h1 {
+    color: #fff;
+    font-family: 'Parisienne', cursive;
+    text-align: center;
     font-size: 3em;
 }
-.russ-floating-head {
-	opacity: .25;
-	position: relative;
-    left: 3em;
-    top: -7em;
-    height: 30em;
 
-}
-
-.start-container {
-	float: right;
-    position: relative;
-    top: 10em;
-    right: 30em; 
+h3 {
+    color: #fff;
+    font-family: 'Josefin Sans';
+    text-align: center;
+    font-size: 1em;
+    margin-top: 2em;
 }
 
 p {
-	color: #F5FF65;
-	font-family: Arial;
-	text-align: center;
-}
-#description {
+    color: #fff;
     font-family: 'Josefin Sans';
-    line-height: 1.5em;
-    font-size: 1.1em;
+    text-align: center;
 }
-input {
-	position: absolute;
-	right: 55em;
+
+
+/* IMAGES */
+
+.russ-floating-head {
+    opacity: .25;
+    margin-left: 2em;
+    height: 30em;
 }
-#generate-line {
-	position: absolute;
-	right: 45em;
+
+.ciara-floating-head {
+    opacity: .25;
+    float: right;
+    height: 30em;
 }
-.main-page {
-	display: none;
+
+
+/* INTRO PAGE CONTENT */
+
+.heart-icon-center {
+    text-align: center;
+    display: inline-flex;
+    width: 44%;
+}
+
+.fa-heart {
+    color: #fff;
+    font-size: 10em;
+    margin: 0 auto;
+}
+
+.fa-heart:hover {
+    color: #ED17BF;
+    text-shadow: 1px 1px 2px black, 0 0 1em #fff, 0 0 0.2em #fff;
+}
+
+
+/* MAIN PAGE CONTENT */
+
+.input-container {
+    font-family: "Josefin Sans";
+    margin: 0 auto;
+    padding: 2em 0em 3em 0em;
+}
+
+#query-term {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid #fff;
+    ;
+    font-size: .65em;
+    background: transparent;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0;
+}
+
+#generate-button {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    background: #fff;
+}
+
+#clear-button {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border: 2px solid #cdcdcd;
+    font-size: .65em;
+    padding: 5px;
+    background: #cdcdcd;
+}
+
+.poem,
+.poet {
+    color: #fff;
+}
+
+.toggle-arrows {
+    display: none;
+    text-align: center;
+    margin-top: 2em;
+    color: #fff;
+}
+
+.fa-chevron-circle-left {
+    float: left;
+}
+
+.fa-chevron-circle-right {
+    float: right;
+}
+
+.results-container {
+    font-family: 'Parisienne', cursive;
+    font-size: 1.5em;
+    height: 20em;
+    width: 35%;
+    margin: 0 auto;
+}
+
+.poem-content {
+    font-family: "Josefin Sans";
+    font-size: 1.3em;
+}
+
+.poem-poet {
+    color: #fff;
+    text-align: right;
+    margin-top: 1em;
+}
+
+.active {
+    display: inline;
+}
+
+li {
+    display: none;
+}
+
+
+/* FOOTER LAYOUT AND STYLE */
+
+#credit {
+    font-size: .6em;
+    width: 100%;
+}
+
+#credit p {
+    color: #fff;
+    font-family: Arial;
+    margin: 8em 0em 0em 5em;
+    text-align: center;
 }
