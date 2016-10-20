@@ -2,7 +2,7 @@
 
  
 showMainPage();
-$('#generate-button').click(romanceGenerator);
+$('#generate-button').on('click', romanceGenerator);
 toggleResults();
 clearSearch();
 

@@ -109,7 +109,7 @@ p {
 .input-container {
     font-family: "Josefin Sans";
     margin: 0 auto;
-    padding: 2em 0em 3em 0em;
+    padding: 2em 0em 1em 0em;
 }
 
 #query-term {
