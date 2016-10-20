@@ -60,5 +60,6 @@ function clearSearch(){
     $('#clear-button').click(function(){
          $('.toggle-arrows').hide();
          $('.poem-results').remove();
+         $('.poem-lines').remove();
     })
 }
