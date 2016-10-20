@@ -1,16 +1,54 @@
-@media screen and (max-width:1000px) {
-
-body {
-	font-size: 100%;
- 	box-sizing: border-box;
+@media only screen and (max-width:1000px) {
+    body {
+        font-size: 100%;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .ciara-floating-head {
+        display: none;
+    }
 }
 
-.container {
-	width:750px;
-}
-
-.ciara-floating-head {
-	display: none;
-}
-
+@media only screen and (max-width:600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .page-content {
+        display: block;
+    }
+    .russ-floating-head {
+        display: block;
+        opacity: .25;
+        margin: 1rem auto;
+        height: 15em;
+    }
+    .heart-icon-center {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    .fa-heart {
+        color: #fff;
+        font-size: 6em;
+        margin: 1rem auto;
+    }
+    #credit p {
+        margin: 2rem;
+    }
+    #russ-fixed {
+        position: fixed;
+        margin: 1rem 0rem 0rem 2rem;
+        height: 27rem;
+        z-index: -1;
+    }
+    .results-container {
+        width: 70%;
+    }
+    .poem-content {
+        margin-top: 4rem;
+        font-size: 1rem;
+    }
 }
