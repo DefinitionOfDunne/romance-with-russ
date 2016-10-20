@@ -14,7 +14,6 @@ function showMainPage() {
 }
 
 function romanceGenerator() {
-    $('.toggle-arrows').show();
     var input = $('#query-term').val();
     $.ajax({
         type: 'GET',
@@ -30,9 +29,14 @@ function romanceGenerator() {
 
 function appendPoems(poems) {
     $.each(poems, function(key, value) {
+        if (value.poem === undefined) {
+            $('.poem-lines').html('Not found! Search again!');
+        } else {
         var poemSelection = value.poem.split('\n')[0]; 
             $('.poem-lines').append('<li class="poem-results"></h1><p class="poem-content">' + poemSelection + '.</p><h5 class="poem-poet">' + '- ' + value.poet + '</h5></li>');
             $('li:first-child').addClass('active');
+            $('.toggle-arrows').show();
+        }
     });
 }
 

@@ -29,7 +29,6 @@ body {
     font-size: 100%;
 }
 
-
 /* MAIN SECTIONS */
 
 .container {
@@ -37,8 +36,6 @@ body {
     margin-top: 3em;
     margin: 0 auto;
 }
-
-.intro-screen {}
 
 .main-page {
     display: none;
@@ -185,6 +182,12 @@ p {
     color: #fff;
     text-align: right;
     margin-top: 1em;
+}
+
+.poem-lines {
+    color: white;
+    font-family: cursive;
+    text-align: center;
 }
 
 .active {
