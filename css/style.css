@@ -2,6 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Parisienne&subset=latin,latin-ext);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url('https://fonts.googleapis.com/css?family=Laila');
 
 /* STANDARD HTML FEATURES */
 
@@ -18,11 +19,16 @@ ul {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #000294;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: pink;
 }
 
 html {
-    background-color: #1C0C45;
+    background-color: rgba(228, 228, 228, 0.4);
 }
 
 body {
@@ -48,14 +54,14 @@ body {
 }
 
 h1 {
-    color: #fff;
-    font-family: 'Parisienne', cursive;
+    color: #000294;
+    font-family: 'Laila', serif;
     text-align: center;
     font-size: 3em;
 }
 
 h3 {
-    color: #fff;
+    color: #000294;
     font-family: 'Josefin Sans';
     text-align: center;
     font-size: 1em;
@@ -63,7 +69,7 @@ h3 {
 }
 
 p {
-    color: #fff;
+    color: #000294;
     font-family: 'Josefin Sans';
     text-align: center;
 }
@@ -93,7 +99,7 @@ p {
 }
 
 .fa-heart {
-    color: #fff;
+    color: #5f0084;
     font-size: 10em;
     margin: 0 auto;
 }
@@ -116,13 +122,12 @@ p {
     display: block;
     margin: 0 auto;
     width: 100%;
-    border: 1px solid #fff;
-    ;
+    border: 1px solid #000294;
     font-size: .65em;
     background: transparent;
     padding: 10px;
     text-align: center;
-    color: #fff;
+    color: #000294;;
     border-radius: 0;
 }
 
@@ -132,7 +137,7 @@ p {
     width: 100%;
     border: 0;
     padding: 10px;
-    background: #fff;
+    background: #000294;
 }
 
 #clear-button {
@@ -147,7 +152,7 @@ p {
 
 .poem,
 .poet {
-    color: #fff;
+    color: #000294;
 }
 
 .toggle-arrows {
@@ -179,7 +184,7 @@ p {
 }
 
 .poem-poet {
-    color: #fff;
+    color: #000294;
     text-align: right;
     margin-top: 1em;
 }
@@ -207,7 +212,7 @@ li {
 }
 
 #credit p {
-    color: #fff;
+    color: #000294;
     font-family: Arial;
     margin: 8em 0em 0em 5em;
     text-align: center;
