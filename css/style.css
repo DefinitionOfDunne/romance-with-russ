@@ -137,7 +137,8 @@ p {
     width: 100%;
     border: 0;
     padding: 10px;
-    background: #000294;
+    background: rgb(25, 31, 128);
+    color: lightgrey;
 }
 
 #clear-button {
@@ -190,7 +191,7 @@ p {
 }
 
 .poem-lines {
-    color: white;
+    color: #000294;
     font-family: cursive;
     text-align: center;
 }

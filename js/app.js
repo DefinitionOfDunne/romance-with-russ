@@ -1,6 +1,6 @@
 'use strict';
 
- 
+
 showMainPage();
 $('#generate-button').on('click', romanceGenerator);
 toggleResults();
@@ -17,28 +17,35 @@ function romanceGenerator() {
     var input = $('#query-term').val();
     $.ajax({
         type: 'GET',
-        url: "http://www.stands4.com/services/v2/poetry.php?uid=5155&tokenid=JSR1kuuz7VsY4Stq&term=" + input,
+        url: "http://www.stands4.com/services/v2/quotes.php?uid=5155&tokenid=JSR1kuuz7VsY4Stq&searchtype=SEARCH&query=" + input,
         dataType: "xml",
+        error: function(data) {
+            alert('Oops something went wrong! Try Again!');
+        },
         success: function(data) {
             var json = $.xml2json(data);
-            var poems = json['#document'].results.result;
-            appendPoems(poems);
+            var quotes = json['#document'].results.result;
+            appendPoems(quotes);
         }
     });
 };
 
-function appendPoems(poems) {
-    $.each(poems, function(key, value) {
-        if (value.poem === undefined) {
-            $('.poem-lines').html('Not found! Search again!');
-        } else {
-        var poemSelection = value.poem.split('\n')[0]; 
-            $('.poem-lines').append('<li class="poem-results"></h1><p class="poem-content">' + poemSelection + '.</p><h5 class="poem-poet">' + '- ' + value.poet + '</h5></li>');
-            $('li:first-child').addClass('active');
-            $('.toggle-arrows').show();
-        }
-    });
-}
+function appendPoems(quotes) {
+    if (quotes === undefined) {
+        $('.poem-lines').html('Not found! Search again!');
+    } else {
+        $.each(quotes, function(key, value) {
+            var poemSelection = value.quote;
+            if (poemSelection === undefined) {
+                $('.poem-lines').html('Not found! Search again!');
+            } else {
+                $('.poem-lines').append('<li class="poem-results"></h1><p class="poem-content">' + poemSelection + '</p><h5 class="poem-poet">' + '- ' + value.author + '</h5></li>');
+                $('li:first-child').addClass('active');
+                $('.toggle-arrows').show();
+            }
+        });
+    };
+};
 
 function toggleResults() {
     $("#right-arrow").click(function() {
@@ -56,10 +63,11 @@ function toggleResults() {
         }
     });
 }
-function clearSearch(){
-    $('#clear-button').click(function(){
-         $('.toggle-arrows').hide();
-         $('.poem-results').remove();
-         $('.poem-lines').empty();
+
+function clearSearch() {
+    $('#clear-button').click(function() {
+        $('.toggle-arrows').hide();
+        $('.poem-results').remove();
+        $('.poem-lines').empty();
     })
 }
