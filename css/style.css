@@ -165,10 +165,12 @@ p {
 
 .fa-chevron-circle-left {
     float: left;
+    color: rgb(25, 31, 128);
 }
 
 .fa-chevron-circle-right {
     float: right;
+    color: rgb(25, 31, 128);
 }
 
 .results-container {
