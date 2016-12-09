@@ -71,3 +71,8 @@ function clearSearch() {
         $('.poem-lines').empty();
     })
 }
+
+//Enforces Click To Submit Search Rather Then Pressing Enter
+$('form').keypress(function(e) { 
+    return e.keyCode != 13;
+}); 

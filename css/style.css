@@ -18,7 +18,7 @@ ul {
 }
 
 a {
-    text-decoration: none;
+    font-variant: small-caps;
     color: #000294;
 }
 
@@ -211,14 +211,14 @@ li {
 /* FOOTER LAYOUT AND STYLE */
 
 #credit {
-    font-size: .6em;
+    font-size: .75em;
     width: 100%;
-    margin-top: 20rem;
 }
 
 #credit p {
     color: #000294;
+    font-variant: small-caps;
     font-family: Arial;
     margin: 8em 0em 0em 5em;
-    text-align: center;
+    text-align: right;
 }
